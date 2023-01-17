@@ -58,9 +58,13 @@ struct LockViewMedium:View{
             Text(Date().toString())
             Text("Next Class")
             HStack{
+                Rectangle()
+                    .foregroundColor(.green)
+                    .frame(width: 2,height: 26)
                 Text(detail.subject)
                 Text(detail.time)
             }
+            .padding(.horizontal,40)
             
         }
     }
@@ -79,9 +83,13 @@ struct LockViewLarge:View{
             Text("Upcoming Classes")
             ForEach(sub , id: \.subId ){ subject in
                 HStack{
+                    Rectangle()
+                        .foregroundColor(.green)
+                        .frame(width: 2,height: 26)
                     Text(subject.subject)
                     Text(subject.time)
                 }
+                .padding(.horizontal,40)
             }
             
             
